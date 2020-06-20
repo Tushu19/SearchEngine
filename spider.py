@@ -32,23 +32,12 @@ else :
     starturl = input('Enter web url or enter: ')
     if ( len(starturl) < 1 ) : starturl = 'http://www.dr-chuck.com/'
 
-#    pos = starturl.rfind('/')
-#    web = starturl[:pos]
-#    print('***************************************************************')
-#    print(starturl)
-#    print('***************************************************************')
-#    print(starturl.find('.com'))
-#    print(starturl.rfind('/'))
-
+    #Allowing links to be added to the DB when they share the same parent
     if ( starturl.find('.com') or starturl.find('.org') or starturl.find('.de') or starturl.find('.net')
      < starturl.rfind('/')) :
         pos = starturl.rfind('/')
         web = starturl[:pos]
-#        print('***************************************************************')
-#        print(web)
-#        print('***************************************************************')
 
-#    web = starturl
     if ( starturl.endswith('.htm') or starturl.endswith('.html') ) :
         pos = starturl.rfind('/')
         web = starturl[:pos]
